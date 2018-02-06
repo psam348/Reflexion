@@ -1,18 +1,37 @@
 What happens when you initialize a repository? Why do you need to do it?
 
+    Git init: install a version control system that keep track of the changes in the folder
+
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
+
+    Staging area is like a buffer where we can add files that have modified and then commit them in one commit
 
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+    If a logic change is done on two files we can add them to the staging then commit them in one logical commit
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+   When working on a new feature we can maintain the master branch clean and develop in a 'canary' branch
+
 How do the diagrams help you visualize the branch structure?
+
+    C1-c2-c3-c4--master
+         \cb1-cb2---branch
+    A branch depart from one commit of the master
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+    C1-c2-c3-c4--master-   -merge
+         \cb1-cb2---branch /
+    It merges the files together taking the changes from the two branches may have conflicts
+
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+   Pro: easy to use
+   Cons: doesn't know the logic of the edit and may render the file unusable 
